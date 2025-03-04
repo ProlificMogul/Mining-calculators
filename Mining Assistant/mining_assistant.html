@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mining Operations AI Assistant</title>
+    <link rel="stylesheet" href="mining_assistant.css" />
+  </head>
+  <body>
+    <div class="chat-container">
+      <div class="chat-header">
+        <div class="ai-avatar">MA</div>
+        <div>
+          <h2>Mining Assistant</h2>
+          <small>AI-powered mining operations expert</small>
+        </div>
+      </div>
+
+      <div class="mining-context">
+        Specialized in: Ventilation, Mineral Economics, Drilling Operations,
+        Safety Protocols, and Mine Planning
+      </div>
+
+      <div class="chat-messages" id="chat-messages">
+        <div class="message ai-message">
+          Hello! I'm your Mining Operations Assistant. I can help you with
+          calculations and questions about:
+          <ul style="margin-left: 20px; margin-top: 10px">
+            <li>Mine ventilation systems</li>
+            <li>Mineral economics and valuations</li>
+            <li>Drilling operations and blast design</li>
+            <li>Safety protocols and risk assessment</li>
+            <li>Mine planning and design</li>
+          </ul>
+          How can I assist you today?
+          <div class="message-metadata">Mining Assistant • Just now</div>
+        </div>
+      </div>
+
+      <div class="chat-input-container">
+        <div class="chat-input-wrapper">
+          <textarea
+            class="chat-input"
+            id="user-input"
+            placeholder="Type your mining-related question here..."
+            rows="1"
+            onInput="autoResize(this)"
+          ></textarea>
+          <button class="send-button" onclick="sendMessage()">Send</button>
+        </div>
+      </div>
+    </div>
+    <script src="mining_assistant.js"></script>
+  </body>
+</html>

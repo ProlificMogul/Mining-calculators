@@ -1,0 +1,66 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mine Production Calculator</title>
+    <link rel="stylesheet" href="./production.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>OEE Calculator</h1>
+      <form id="oeeForm">
+        <!-- Input fields -->
+        <div class="form-group">
+          <label for="plannedTime">Planned Operating Time (hours)</label>
+          <input type="number" id="plannedTime" min="0" step="any" required />
+        </div>
+        <div class="form-group">
+          <label for="actualTime">Actual Operating Time (hours)</label>
+          <input type="number" id="actualTime" min="0" step="any" required />
+        </div>
+        <div class="form-group">
+          <label for="expectedOutput">Expected Output (units)</label>
+          <input
+            type="number"
+            id="expectedOutput"
+            min="0"
+            step="any"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="actualOutput">Actual Output (units)</label>
+          <input type="number" id="actualOutput" min="0" step="any" required />
+        </div>
+        <div class="form-group">
+          <label for="totalOutput">Total Output (units)</label>
+          <input type="number" id="totalOutput" min="0" step="any" required />
+        </div>
+        <div class="form-group">
+          <label for="goodOutput">Good Output (units)</label>
+          <input type="number" id="goodOutput" min="0" step="any" required />
+        </div>
+        <button type="button" class="btn" onclick="calculateOEE()">
+          Calculate OEE
+        </button>
+        <p id="errorMessage" class="error"></p>
+      </form>
+      <!-- Results -->
+      <div id="results" class="result" style="display: none">
+        <h3>Results:</h3>
+        <p>
+          <strong>Availability:</strong> <span id="availabilityResult">0%</span>
+        </p>
+        <p>
+          <strong>Performance:</strong> <span id="performanceResult">0%</span>
+        </p>
+        <p><strong>Quality:</strong> <span id="qualityResult">0%</span></p>
+        <p>
+          <strong>Overall Equipment Effectiveness (OEE):</strong>
+          <span id="oeeResult">0%</span>
+        </p>
+      </div>
+    </div>
+    <script src="./production.js"></script>
+  </body>
+</html>

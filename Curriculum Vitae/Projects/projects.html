@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mining Engineer & Full Stack Developer Portfolio</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/lucide/0.263.1/lucide.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./projects.css" />
+  </head>
+  <body>
+    <div class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <svg
+            width="40"
+            height="40"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              d="M6 12h12M6 12l-2 2m2-2l-2-2m14 2l2 2m-2-2l2-2M3 8V6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v2M3 16v2a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-2"
+            />
+          </svg>
+          <h1 class="hero-title">Mining Engineer & Full Stack Developer</h1>
+        </div>
+        <p class="hero-subtitle">
+          Bridging the gap between mining engineering and modern technology
+          through innovative solutions
+        </p>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="filters">
+        <div class="filter-buttons">
+          <button class="filter-btn active" data-category="all">
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M16 18L22 12L16 6"></path>
+              <path d="M8 6L2 12L8 18"></path>
+            </svg>
+            All Projects
+          </button>
+          <button class="filter-btn" data-category="work">
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path
+                d="M20 7H4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2Z"
+              ></path>
+              <path d="M16 7V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v3"></path>
+            </svg>
+            Work Experience
+          </button>
+          <button class="filter-btn" data-category="school">
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+              <path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5"></path>
+            </svg>
+            Academic Projects
+          </button>
+          <button class="filter-btn" data-category="personal">
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+            Personal Projects
+          </button>
+        </div>
+      </div>
+
+      <div class="projects-grid" id="projectsGrid">
+        <!-- Projects will be inserted here by JavaScript -->
+      </div>
+    </div>
+
+    <!-- Modal container -->
+    <div class="modal-overlay" id="modalOverlay">
+      <div class="modal">
+        <div class="modal-header">
+          <h2 class="modal-title" id="modalTitle">Project Title</h2>
+          <button class="modal-close" id="modalClose">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M18 6L6 18M6 6l12 12"></path>
+            </svg>
+          </button>
+        </div>
+        <div class="modal-body" id="modalBody">
+          <!-- Modal content will be inserted here by JavaScript -->
+        </div>
+      </div>
+    </div>
+    <script src="./projects.js"></script>
+  </body>
+</html>

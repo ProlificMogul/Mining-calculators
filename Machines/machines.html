@@ -1,0 +1,50 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Machine Matching Calculator</title>
+    <link rel="stylesheet" href="./machines.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Machine Matching Calculator</h1>
+      <form id="machine-matching-form">
+        <div>
+          <label for="bucket-size">Bucket Size (m³):</label>
+          <input type="number" id="bucket-size" step="0.1" required />
+        </div>
+        <div>
+          <label for="truck-capacity">Truck Capacity (m³):</label>
+          <input type="number" id="truck-capacity" step="0.1" required />
+        </div>
+        <div>
+          <label for="excavator-cycle-time"
+            >Excavator Cycle Time (seconds):</label
+          >
+          <input type="number" id="excavator-cycle-time" step="0.1" required />
+        </div>
+        <div>
+          <label for="truck-cycle-time">Truck Cycle Time (minutes):</label>
+          <input type="number" id="truck-cycle-time" step="0.1" required />
+        </div>
+        <button type="submit">Calculate</button>
+      </form>
+      <div class="results" id="results" style="display: none">
+        <h2>Calculation Results</h2>
+        <p>
+          <strong>Number of Passes to Fill Truck:</strong>
+          <span id="passes-result"></span>
+        </p>
+        <p>
+          <strong>Excavator Loading Time (minutes):</strong>
+          <span id="loading-time-result"></span>
+        </p>
+        <p>
+          <strong>Number of Trucks Needed per Excavator:</strong>
+          <span id="trucks-needed-result"></span>
+        </p>
+      </div>
+    </div>
+    <script src="./machines.js"></script>
+  </body>
+</html>

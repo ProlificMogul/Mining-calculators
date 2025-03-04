@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Drilling Results</title>
+    <link rel="stylesheet" href="drilling_results.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Drill Result Grade Calculator</h1>
+      <form id="grade-calculator-form">
+        <div>
+          <label for="mineral">Select Mineral:</label>
+          <select id="mineral" required>
+            <optgroup label="Base Metals">
+              <option value="Cobalt">Cobalt (Co)</option>
+              <option value="Copper">Copper (Cu)</option>
+              <option value="Iron Ore">Iron Ore (Fe)</option>
+              <option value="Lead">Lead (Pb)</option>
+              <option value="Molybdenum">Molybdenum (Mo)</option>
+              <option value="Nickel">Nickel (Ni)</option>
+              <option value="Zinc">Zinc (Zn)</option>
+            </optgroup>
+            <optgroup label="Precious Metals">
+              <option value="Gold" selected>Gold (Au)</option>
+              <option value="Palladium">Palladium (Pd)</option>
+              <option value="Platinum">Platinum (Pt)</option>
+              <option value="Silver">Silver (Ag)</option>
+            </optgroup>
+          </select>
+        </div>
+        <div>
+          <label for="drill-result"
+            >Drill Result:
+            <i
+              ><small
+                >base metals input is a percentage while precious metals is
+                grammes per tonne g/t</small
+              ></i
+            >
+          </label>
+          <input
+            type="number"
+            id="drill-result"
+            step="0.01"
+            required
+            placeholder="numbers only e.g 10"
+          />
+        </div>
+        <button type="submit">Determine Grade</button>
+      </form>
+      <div class="results" id="results" style="display: none">
+        <h2>Result</h2>
+        <p><strong>Mineral:</strong> <span id="mineral-name"></span></p>
+        <p><strong>Grade:</strong> <span id="grade-result"></span></p>
+      </div>
+    </div>
+    <script src="drilling_results.js"></script>
+  </body>
+</html>

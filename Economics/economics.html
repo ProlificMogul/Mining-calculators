@@ -1,0 +1,57 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mineral economics calculator</title>
+    <link rel="stylesheet" href="./economics.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Mining Economics Calculator</h1>
+      <form id="calculator-form">
+        <div>
+          <label for="initial-investment">Initial Investment ($):</label>
+          <input type="number" id="initial-investment" required />
+        </div>
+        <div>
+          <label for="project-lifetime">Project Lifetime (years):</label>
+          <input type="number" id="project-lifetime" required />
+        </div>
+        <div>
+          <label for="discount-rate">Discount Rate (%):</label>
+          <input type="number" id="discount-rate" step="0.01" required />
+        </div>
+        <div>
+          <label for="cash-flows">Cash Flows (comma-separated):</label>
+          <input
+            type="text"
+            id="cash-flows"
+            placeholder="e.g., 10000, 15000, -5000"
+            required
+          />
+        </div>
+        <button type="submit">Calculate</button>
+      </form>
+      <div class="results" id="results" style="display: none">
+        <h2>Calculation Results</h2>
+        <p>
+          <strong>Net Present Value (NPV):</strong>
+          <span id="npv-result"></span>
+        </p>
+        <p>
+          <strong>Internal Rate of Return (IRR):</strong>
+          <span id="irr-result"></span>
+        </p>
+        <p>
+          <strong>Payback Period:</strong>
+          <span id="payback-period-result"></span>
+        </p>
+        <p>
+          <strong>Profitability Index (PI):</strong>
+          <span id="pi-result"></span>
+        </p>
+      </div>
+    </div>
+    <script src="./economics.js"></script>
+  </body>
+</html>
